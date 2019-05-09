@@ -1,0 +1,9 @@
+﻿{
+"length" : 3,
+"isDialogue" : "dialogue",
+"dialogues" : [
+"(RICH,L)으하하, 이 계곡은 다 내꺼다!",
+"(DOCTOR,R)누구 마음대로?",
+"(RICH,L)내 마음대로! 난 부자니까."
+]
+}
