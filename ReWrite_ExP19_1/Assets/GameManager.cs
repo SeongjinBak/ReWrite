@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        DontDestroyOnLoad(gameObject);
         // Json 테스트용 디버그 테스트셋
         TestSet();
     }
-
+    [SerializeField]
     public struct Pair{
         public int phaseNum;
         public int choiceNum;
@@ -31,14 +31,16 @@ public class GameManager : MonoBehaviour
     public string playerName;
     // 대화창인지, 선택지창인지
     public string type;
-
+    // 현재 장소
+    public string place;
 
     void TestSet()
     {
         pair.phaseNum = 1;
-        pair.choiceNum = 1;
+        pair.choiceNum = 2;
         playerName = "R";
         type = "D";
+        place = "ROOM";
     }
     void Start()
     {/*

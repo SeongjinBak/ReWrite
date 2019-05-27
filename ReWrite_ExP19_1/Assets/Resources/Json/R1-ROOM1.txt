@@ -1,0 +1,7 @@
+﻿{
+   "length" : 1,
+   "isDialogue" : "dialogue",
+   "dialogues" :    [
+         "(RICH,L)좋은 아침이구만! 아래로 내려가 날씨를 봐볼까?"
+         ]
+}

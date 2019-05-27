@@ -2,8 +2,10 @@
     "length": 3,
     "isDialogue": "dialogue",
     "dialogues": [
-        "(RICH, L) 으하하, 이 계곡은 다 내꺼다!",
-        "(DOCTOR, R) 누구 마음대로?",
+        "(RICH, L) 으하하, 이 계곡은 다 내꺼다!그러니 아무도 건들지 말거라!",
+        "(FARMER, R) 누구 마음대로?",
         "(RICH, L) 내 마음대로! 난 부자니까."
-    ]
+    ],
+    "direction": [],
+    "name": []
 }

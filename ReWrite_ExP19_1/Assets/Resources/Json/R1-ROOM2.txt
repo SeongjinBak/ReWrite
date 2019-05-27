@@ -1,0 +1,9 @@
+﻿{
+   "length" : 3,
+   "isDialogue" : "dialogue",
+   "dialogues" :    [
+         "(RICH,L)후우 정말 날씨가 좋구만!",
+         "쿵 쿵 쿵!",
+         "(RICH,L)뭐지? 문을 통해 정문으로 나가봐야겠구만"
+         ]
+}

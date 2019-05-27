@@ -9,12 +9,15 @@ public class JsonParser
     public string isDialogue;
     public string[] dialogues;
     // 화자 이미지 출력할 장소
-    public string direction;
+    public string [] direction;
     // 화자 이름
-    public string name;
-
+    public string [] name;
+    
     public void DialogueParser()
     {
+        name = new string[length];
+        direction = new string[length];
+
         for(int i = 0; i < length; i++)
         {
            
@@ -33,12 +36,23 @@ public class JsonParser
                     {
                         direction = parsedStr[j].ToString();
                     }
-                    name = speakerName;
-                    this.direction = direction;
+                    name[i] = speakerName;
+                    this.direction[i] = direction;
                     string tempStr = "";
+                    int modular = 1;
+                    int limit = 15;
+                    if(isDialogue == "choice")
+                    {
+                        limit = 11;
+                    }
                     for(int index = j + 1; index < parsedStr.Length;index++)
                     {
                         tempStr += parsedStr[index];
+                        if(modular++%limit == 0)
+                        {
+                            // 17개 이상이 되면 개행.
+                            tempStr += "\n";
+                        }
                     }
                     dialogues[i] = tempStr;
                     break;

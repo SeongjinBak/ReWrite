@@ -1,0 +1,8 @@
+﻿{
+   "length" : 2,
+   "isDialogue" : "dialogue",
+   "dialogues" :    [
+         "(RICH,L)흠 아무렇지 않게 보냈지만 조금은 걱정되는구만",
+         "(RICH,L)혹시 모르니 의사를 불러서 건강검진을 받아봐야겠군!"
+         ]
+}
