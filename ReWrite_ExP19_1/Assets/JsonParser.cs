@@ -50,7 +50,25 @@ public class JsonParser
                         tempStr += parsedStr[index];
                         if(modular++%limit == 0)
                         {
-                            // 17개 이상이 되면 개행.
+                            // 15개 이상이 되면 개행.
+                            tempStr += "\n";
+                        }
+                    }
+                    dialogues[i] = tempStr;
+                    break;
+                }
+                // 대화가 아닌, 오브젝트 상호작용 텍스트일 경우
+                else
+                {
+                    string tempStr = "";
+                    int limit = 15;
+                    int modular = 1;
+                    for (int index = 0; index < parsedStr.Length; index++)
+                    {
+                        tempStr += parsedStr[index];
+                        if (modular++ % limit == 0)
+                        {
+                            // 15개 이상이 되면 개행.
                             tempStr += "\n";
                         }
                     }

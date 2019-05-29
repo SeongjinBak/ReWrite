@@ -28,8 +28,12 @@ namespace SubProject14
         // Update is called once per frame
         void Update()
         {
+            
+            if(joystick == null)
+            {
+                joystick = GameObject.Find("BackgroundImage").GetComponent<JoystickScript>();
+            }
             HandleInput();
-
 
         }
         void FixedUpdate()

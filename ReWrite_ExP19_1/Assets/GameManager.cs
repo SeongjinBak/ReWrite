@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         // Json 테스트용 디버그 테스트셋
         TestSet();
+
+        Screen.SetResolution(Screen.width, (Screen.width / 9) * 16, false);
+
+
     }
     [SerializeField]
     public struct Pair{

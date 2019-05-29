@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
     private bool isTouched;
     [SerializeField]
     // 현재 대화중인지
-    private bool isSpeaking;
+    public bool isSpeaking;
     // Start is called before the first frame update
     void Start()
     {
@@ -117,10 +117,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void ShowDialogue()
-    {
-        // 대화창을 GameManager에 저장되어 있는 캐릭터 이름, 현재 분기 정보들에 따라 로드 한다.
-        LoadDialogue();
+    public void ShowDialogue(string fileName = "")
+    { // 대화중임을 설정
+       // isSpeaking = true;
+        if (fileName == "")
+            // 대화창을 GameManager에 저장되어 있는 캐릭터 이름, 현재 분기 정보들에 따라 로드 한다.
+            LoadDialogue();
+        else
+        {
+            LoadDialogue(fileName);
+        }
         // 대화 시작
         StartCoroutine(StartDialogue());
     }
@@ -208,6 +214,10 @@ public class DialogueManager : MonoBehaviour
             return "부자";
         else if (dialogue.name[count] == "FARMER")
             return "농부";
+        else if (dialogue.name[count] == "DOCTOR")
+            return "의사";
+        else if (dialogue.name[count] == "SON")
+            return "아들";
         else
         {
             return "";
@@ -252,10 +262,15 @@ public class DialogueManager : MonoBehaviour
         }
         
     }
-    public void LoadDialogue()
+    public void LoadDialogue(string tmp = "")
     {
-
-         string fileName = GameManager.instance.playerName + GameManager.instance.pair.phaseNum.ToString() + "-" + GameManager.instance.place + GameManager.instance.pair.choiceNum;
+        string fileName;
+        if (tmp != "")
+        {
+            fileName = tmp;
+        }
+        else
+            fileName = GameManager.instance.playerName + GameManager.instance.pair.phaseNum.ToString() + "-" + GameManager.instance.place + GameManager.instance.pair.choiceNum;
         //string fileName = "R1-ROOM1";
         //Debug.Log(fileName);
         string jsonFile = Resources.Load<TextAsset>("Json/" + fileName).ToString();
