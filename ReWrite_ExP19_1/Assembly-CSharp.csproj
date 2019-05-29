@@ -61,16 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02.Scripts\AutoMove.cs" />
+    <Compile Include="Assets\02.Scripts\Colider.cs" />
+    <Compile Include="Assets\02.Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\02.Scripts\GameManager.cs" />
+    <Compile Include="Assets\02.Scripts\JoystickScript.cs" />
+    <Compile Include="Assets\02.Scripts\JsonParser.cs" />
+    <Compile Include="Assets\02.Scripts\MainMenu.cs" />
+    <Compile Include="Assets\02.Scripts\PlayerController.cs" />
     <Compile Include="Assets\02.Scripts\Rich_Room_Manager.cs" />
     <Compile Include="Assets\02.Scripts\RichRoomCollider.cs" />
-    <Compile Include="Assets\Colider.cs" />
-    <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\JoystickScript.cs" />
-    <Compile Include="Assets\JsonParser.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\New Folder\test.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
     <None Include="Assets\Resources\Json\R2-LOBBY3.txt" />
     <None Include="Assets\Resources\Json\FARMER-CHOICE.txt" />
     <None Include="Assets\Resources\Json\R2-ROOM1.txt" />
